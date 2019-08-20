@@ -1,4 +1,4 @@
-package webapp.signIn;
+package com.users;
 
 public class Users {
 
@@ -12,12 +12,7 @@ public class Users {
 	}
 	private String password;
 	
-	public Users(String name,String username,  String password) {
-		super();
-		this.username = username;
-		this.name = name;
-		this.password = password;
-	}
+	
 	public String getUsername() {
 		return username;
 	}
@@ -31,9 +26,5 @@ public class Users {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	@Override
-	public String toString() {
-		return String.format("Users [username=%s, name=%s, password=%s]", username, name, password);
-	}
-	
+
 }
