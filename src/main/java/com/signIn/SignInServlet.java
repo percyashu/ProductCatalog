@@ -1,4 +1,4 @@
-package webapp.signIn;
+package com.signIn;
 
 import java.io.IOException;
 
@@ -7,6 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.users.Users;
 @WebServlet(urlPatterns ="/signIn.do")
 public class SignInServlet extends HttpServlet {
 	
@@ -17,8 +19,19 @@ protected void doGet(HttpServletRequest request,HttpServletResponse response)  t
 	
 }
 	protected void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
-		String name = request.getParameter("name");
+		String username = request.getParameter("username");
 		String password = request.getParameter("password");
+		Users user = new Users();
+		user.setUsername(username);
+		user.setPassword(password);
+		boolean valid = SignInService.login(user);
+		if (valid) {
+			request.getSession().setAttribute("username", username);
+			response.sendRedirect("/home.do");
+		} else {
+			request.setAttribute("errorMessage", "Invalid Credentials!! SignUp ");
+			request.getRequestDispatcher("/WEB-INF/views/signIn.jsp").forward(request, response);
+		}
 		
 	}
 	
