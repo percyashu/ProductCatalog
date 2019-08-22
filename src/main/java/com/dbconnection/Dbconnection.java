@@ -9,7 +9,7 @@ public class Dbconnection {
 		Connection con=null; // creating connection
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/productcatalog","Admin","Postgres");
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/productdb","Admin","Postgres");
 			System.out.println("Connected");			
 		} catch (Exception e) {
 			System.out.println("not Connected");
