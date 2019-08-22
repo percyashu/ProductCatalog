@@ -3,7 +3,7 @@
 		<ul class="nav navbar-nav">
 			<li class="active"><a href="/home.do">Home</a></li>
 			<li><a href="/product.do">Edit Products</a></li>
-			<li><a href="/catalog.do">Edit Catalog</a></li>
+			<li><a href="/listCatalog.do">Edit Catalog</a></li>
 		</ul>
 
 		<ul class="nav navbar-nav navbar-right">
