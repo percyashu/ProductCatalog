@@ -5,59 +5,85 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Products {
-	private String PiD;
+	private int Pid;
 	private String Pname;
 	private String Cname;
-	private Blob Pimage;
-	public  Products(ResultSet resultSet)  throws SQLException{
-		
-		this.PiD=resultSet.getString("PiD");
-		this.Pname=resultSet.getString("Pname");;
-		this.Cname=resultSet.getString("Cname");;
-		this.Pimage =resultSet.getBlob("Pimage");;
-	}
+	private byte[] Pimage;
+   private String Simage;
 	
-	
-	public String getPiD() {
-		return PiD;
+
+	public Products(int pid, String pname, String cname, byte[] pimage, String simage) {
+	super();
+	Pid = pid;
+	Pname = pname;
+	Cname = cname;
+	Pimage = pimage;
+	Simage = simage;
+}
+
+	public int getPid() {
+		return Pid;
 	}
 
-
-	public void setPiD(String piD) {
-		this.PiD = piD;
+	public void setPid(int pid) {
+		Pid = pid;
 	}
-
 
 	public String getPname() {
 		return Pname;
 	}
 
-
 	public void setPname(String pname) {
-		this.Pname = pname;
+		Pname = pname;
 	}
-
 
 	public String getCname() {
 		return Cname;
 	}
 
-
 	public void setCname(String cname) {
-		this.Cname = cname;
+		Cname = cname;
 	}
 
-
-	public Blob getPimage() {
+	public byte[] getPimage() {
 		return Pimage;
 	}
 
-
-	public void setPimage(Blob image) {
-		this.Pimage = image;
+	public void setPimage(byte[] pimage) {
+		Pimage = pimage;
 	}
 
+	
 
+	public String getSimage() {
+		return Simage;
+	}
+
+	public void setSimage(String simage) {
+		Simage = simage;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Pid;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Products other = (Products) obj;
+		if (Pid != other.Pid)
+			return false;
+		return true;
+	}
 	
 	
 

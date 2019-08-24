@@ -7,43 +7,32 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.swing.event.ListSelectionEvent;
+
 import com.dbconnection.Dbconnection;
 import com.mysql.jdbc.Statement;
 
-
-
-
-
 public class ProductsService {
 
-	public static Products listP() {
-		ResultSet rs = null;
-		Products prod =null;
-		java.sql.Statement stmt = null; 
-		try {
-			Connection con=Dbconnection.getConnection(); //getting the connection method here from dbconnection
-
-String sql ="SELECT * FROM producttbl ;";
-stmt = con.createStatement();
-
-			rs=stmt.executeQuery(sql);
-			while(rs.next()){
-		         Products product = new Products (rs);
-		         product.setPiD(rs.getString("PiD"));
-		         product.setPname(rs.getString("Pname"));
-		         product.setCname(rs.getString("Cname"));
-		         product.setPimage(rs.getBlob("Pimage"));
-
-		         System.out.println("products"+ product);
-	         
-	         }
-
-	     } catch (SQLException e) {
-	        System.out.println(e);
-	     }
+		private static List<Products> products = new ArrayList<Products>();
 		
-		return prod;
-		
-	}
-
-}
+		public List<Products> retrieveProducts(){
+			return products;
+		}
+		public List<Products> clearProds(){
+			products.clear();
+			return products;
+			
+		}
+		public void addProducts(Products product) {
+			products.add(product);
+		}
+		public void delProds() {
+			products.clear();
+			
+		}
+		public int sizeProds() {
+			int i=products.size();
+			return i;
+		}
+		}

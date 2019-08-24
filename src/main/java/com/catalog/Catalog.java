@@ -1,30 +1,20 @@
 package com.catalog;
 
-public  class Catalog {
+public class Catalog {
 
 	private String Cname;
 	private String Cdescript;
-	
+
 	public Catalog(String cname, String cdescript) {
 		super();
 		Cname = cname;
 		Cdescript = cdescript;
 	}
 
-
-
-
-
 	@Override
 	public String toString() {
 		return String.format("Catalog [Cname=%s, Cdescript=%s]", Cname, Cdescript);
 	}
-
-
-
-
-
-
 
 	@Override
 	public int hashCode() {
@@ -34,10 +24,6 @@ public  class Catalog {
 		result = prime * result + ((Cname == null) ? 0 : Cname.hashCode());
 		return result;
 	}
-
-
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -61,31 +47,20 @@ public  class Catalog {
 		return true;
 	}
 
-
-
-
-
 	public String getCname() {
 		return Cname;
 	}
-
 
 	public String getCdescript() {
 		return Cdescript;
 	}
 
-
 	public void setCname(String Cname) {
 		this.Cname = Cname;
 	}
-
 
 	public void setCdescript(String Cdescript) {
 		this.Cdescript = Cdescript;
 	}
 
-
-	
-	
-	
 }

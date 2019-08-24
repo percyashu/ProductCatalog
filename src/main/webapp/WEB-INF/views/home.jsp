@@ -8,19 +8,20 @@
 		<H1 class="text-center">Welcome ${username}</H1>
 		<h2 class="text-left-align">Your Products  are </h2>  
 			 
-		        <table>
-		        <c:forEach items="${catalogs}" var="catalog">
-        <TR>
-            <TD>Actor ID: </TD>
-            <TD>${catalog.cname}</TD>
-        </TR>
+		      
+		 <div class="container-fluid">
+    <div class="row">
+      <c:forEach items="${products}" var="product">
+      <div class="col-md-4 product-grid">
+		<div class="image">
+		<img  style="width:255px;height:255px" src="data:image/png;base64,${product.simage} " />
+		</div> 
+		<h3 class="text-left-align">${product.pname} </h3>
+		<h4 class="text-left-align">${product.cname} </h4>        
+		</div>
         
-        <TR>
-            <TD>Lastname: </TD>
-            <TD>${catalog.cdescript}</TD>
-        </TR>
          </c:forEach>
-        </table>
+       
 	</div>
 	<%@include file ="../common/footer.jspf"
 %>

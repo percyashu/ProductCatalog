@@ -27,7 +27,7 @@ protected void doGet(HttpServletRequest request,HttpServletResponse response)  t
 		boolean valid = SignInService.login(user);
 		if (valid) {
 			request.getSession().setAttribute("username", username);
-			response.sendRedirect("/home.do");
+			response.sendRedirect("/listProduct.do");
 		} else {
 			request.setAttribute("errorMessage", "Invalid Credentials!! SignUp ");
 			request.getRequestDispatcher("/WEB-INF/views/signIn.jsp").forward(request, response);
