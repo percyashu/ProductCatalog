@@ -16,10 +16,9 @@
 			 <input name="add"
 				type="submit" class ="btn btn-success" value="Submit"/>
 				<a class="btn btn-danger"
-		href="/catalog.do">Cancel</a></li>
+		href="/catalog.do">Cancel</a>
 		</form>
-<table  class="table table-striped">
-		
-	</div>
+
+
 	<%@include file ="../common/footer.jspf"
 %>

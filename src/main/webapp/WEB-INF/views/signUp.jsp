@@ -12,31 +12,32 @@
 		</ul>
 
 	</nav>
-
-	<div class="container">
-<form action="/signUp.do" method="POST">
 <h1>SignUp</h1>
+	
+<form action="/signUp.do" method="POST">
+
 	<fieldset class="form-group">
 		<label>Name</label>
-		<input name="name" type="text" /><BR/>
+		<input name="name" type="text" class="form-control" /><BR/>
 	</fieldset>
 	<fieldset class="form-group">
 		<label>Username</label>
-		<input name="username" type="text"/><BR/>
+		<input name="username" type="text" class="form-control"/><BR/>
 	</fieldset>
 	<fieldset class="form-group">
 		<label>Password</label>
-		<input name="password" type="password" /><BR/>
+		<input name="password" type="password" class="form-control"/><BR/>
 	</fieldset>
 	<fieldset class="form-group">
 		<label>Comfirm password</label>
-		 <input name="cpassword" type="password" /><BR/>
+		 <input name="cpassword" type="password" class="form-control" /><BR/>
 	</fieldset>
 <input type="Submit" class ="btn btn-success" value="Login" />
+	
+	
 
 <p><font color="red">${errorMessage}</font></p>
 </form>
-</div>
 
 	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
 	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
