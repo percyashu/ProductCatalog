@@ -10,7 +10,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
-@WebFilter(urlPatterns = { "/home.do","/catalog.do", "/editProduct.do","/products.do","/editCatalog.do"})
+@WebFilter(urlPatterns = { "/home.do","/catalog.do", "/editProduct.do","/editCatalog.do"})
 
 public class LoginFilter implements Filter {
 

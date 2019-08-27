@@ -7,8 +7,8 @@
 		</ul>
 
 		<ul class="nav navbar-nav navbar-right">
-		
-			<li><a href="/logout.do">Log out</a></li>
+		<li><a href="/signIn.do">Sign In</a></li>
+			
 		</ul>
 	
 

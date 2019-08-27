@@ -1,6 +1,6 @@
 <%@include file ="../common/header.jspf"
 %>
-	<%@include file ="../common/nav.jspf"
+	<%@include file ="../common/nav2.jspf"
 %>
 <div class="container">
 		

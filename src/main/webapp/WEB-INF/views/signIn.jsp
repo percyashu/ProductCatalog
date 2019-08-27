@@ -7,7 +7,11 @@
 	rel="stylesheet">
 	</head>
 	<nav class="navbar navbar-default">
+	<ul class="nav navbar-nav">
+			<li ><a href="/listProduct.do">Home</a></li>
+		</ul>
 		<ul class="nav navbar-nav navbar-right">
+		
 			<li><a href="/signUp.do">SignUp</a></li>
 		</ul>
 
