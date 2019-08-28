@@ -14,6 +14,7 @@ Where all users can view products and their category but only authorised users c
 #Package descriptions
 
  1.com.dbconnection :Used to establish connection to database. //username & password can be changed here to that of your phpmyadmin username and password
+ 
  2.com.signIn :Used to authenticate users 
  3.com.signUp :Used to add a new authenticated user
  4.com.logout :used to invalidate session
